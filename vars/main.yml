@@ -1,0 +1,4 @@
+# roles/rabbitmq/vars/main.yml
+---
+rabbitmq_pkgs:
+  - rabbitmq-server

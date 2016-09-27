@@ -1,0 +1,11 @@
+# roles/rabbitmq/tasks/main.yml
+---
+- name: install packages
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items: "{{ rabbitmq_pkgs }}"
+  become: yes
+  tags:
+    - rabbitmq
+    - installation
